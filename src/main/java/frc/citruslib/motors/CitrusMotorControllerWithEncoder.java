@@ -11,5 +11,16 @@ public interface CitrusMotorControllerWithEncoder {
     public void setConfiguration();
 
     // ====== Motor Setters ======
+    public void setPercentOutput(double percentOutput);
+
+    public void setVoltageOutput(double voltageOutput);
+
+    public void setPositionSetpoint(int slot, double setpoint);
+
+    public void setPositionSetpoint(int slot, double setpoint, double feedForwardVolts);
+
+    public void
+
+
 
 }
