@@ -71,7 +71,7 @@ public class CitrusTalonFxConfiguration {
             case 2:
                 this.slot2Conf = conf;
             default:
-                throw new RuntimeException(String.format("Invalid PID Slot Number: %s", slot));
+                throw new RuntimeException(String.format("Invalid PID Slot Number: %d", slot));
         }
         return this;
     }
@@ -79,6 +79,10 @@ public class CitrusTalonFxConfiguration {
     public CitrusTalonFxConfiguration setSensorUpdateFreq(final double freq) {
         this.sensorUpdateFreq = freq;
         return this;
+    }
+
+    public double getSensorUpdateFreq() {
+        return this.sensorUpdateFreq;
     }
 
     public TalonFXConfiguration toTalonFXConfiguration(final Function<Double, Double> toNativeSensorPos) {
